@@ -10,7 +10,7 @@ This project focuses on Exploratory Data Analysis (EDA), Descriptive analysis, a
 
 The primary objectives of this project:
 
-# **Data Inspection:**
+# **Data Inspection**
 
 Import the Datasets winemag-data_first150k.csv and Inspect! winemag-data_first150k.csv contains 10 columns and 150k rows of wine reviews.
 
@@ -39,25 +39,25 @@ One consideration is that this data is from one month in the summer (June 2017) 
 
 For our further analysis we choose to use Hybrid Approach (3.3.5) in our further analysis that is we will use `reviews_hybrid`.   
 
-## 4. Handle outliers in the `reviews_hybrid` dataset.   
-### 4.1 Analyze the distribution of 'Price'  
-### 4.2 Handle the Outliers type 2: Values are correct but extreme to our other data points  
+## 4. Handle outliers in the `reviews_hybrid` dataset   
+    - 4.1 Analyze the distribution of 'Price'  
+    - 4.2 Handle the Outliers type 2: Values are correct but extreme to our other data points  
 Given this information, we have several options for handling these outliers, depending on my specific analysis goals:  
-#### 4.2.1 **Keep the outliers**: If the high-priced wines are of particular interest or if we're analyzing market segments that include premium wines, we might choose to retain these data points.  
-#### 4.2.2 **Exclude the outliers**: For analyses where extreme values might skew the results, such as when calculating average prices, we might consider excluding these outliers.  
-#### 4.2.3 **Cap and Floor the values**: We can cap and floor prices at a certain thresholds to lessen the impact of extremely high/low prices. But the data will not be excluded only the price values will be overwritten.  
-#### 4.2.4 **Discretization and Binning of 'Points' into 'Rating'**: I will use this for my further analysis.  
-#### 4.2.5 **Discretization and Binning of 'Price' into 'Price_cat'**: I will use this for my further analysis.  
-##### 4.2.5.1 Approach Discretizing Price based on Equal width bins.  
-##### 4.2.5.2 Approach Discretizing Price based on putting the same number of reviews into different brackets.    
-##### 4.2.5.3 Approach Discretizing Price based on defining customized quanlites.   
-##### 4.2.5.4 Approach Discretizing Price based on defining customized quanlites and considering outliers.  
-##### 4.2.5.5 Approach K-Means Clustering for Price Binning.  
+        - 4.2.1 **Keep the outliers**: If the high-priced wines are of particular interest or if we're analyzing market segments that include premium wines, we might choose to retain these data points.  
+        - 4.2.2 **Exclude the outliers**: For analyses where extreme values might skew the results, such as when calculating average prices, we might consider excluding these outliers.  
+        - 4.2.3 **Cap and Floor the values**: We can cap and floor prices at a certain thresholds to lessen the impact of extremely high/low prices. But the data will not be excluded only the price values will be overwritten.  
+        - 4.2.4 **Discretization and Binning of 'Points' into 'Rating'**: I will use this for my further analysis.  
+        - 4.2.5 **Discretization and Binning of 'Price' into 'Price_cat'**: I will use this for my further analysis.  
+            - 4.2.5.1 Approach Discretizing Price based on Equal width bins.  
+            - 4.2.5.2 Approach Discretizing Price based on putting the same number of reviews into different brackets.    
+            - 4.2.5.3 Approach Discretizing Price based on defining customized quanlites.   
+            - 4.2.5.4 Approach Discretizing Price based on defining customized quanlites and considering outliers.  
+            - 4.2.5.5 Approach K-Means Clustering for Price Binning.  
 For our further analysis, we choose to use the Descritization and Binning approach according to 4.2.4 and 4.2.5.5   
 
-## 5. Convert Rating and Price_Category to categorical data and set the order in `reviews_hybrid` dataset.    
+## 5. Convert Rating and Price_Category to categorical data and set the order in `reviews_hybrid` dataset    
 
-# **Pattern Discovery Part I - Data Aggregation:**  
+# **Pattern Discovery Part I - Data Aggregation**  
 
 ## 1. Which country is dominant in Wine industry production?  
 ## 2. What is the most common variety reviewed in each country?  
@@ -70,7 +70,7 @@ For our further analysis, we choose to use the Descritization and Binning approa
 ## 9. Heatmap of the top 20 wine-producing countries based on the frequency of wines falling into different Rating categories.
 ## 10. Heatmap of the top 20 wine-producing countries based on the frequency of wines falling into different Price categories.
 
-# **Pattern Discovery Part II - Exploratory and Descriptive Analysis:**
+# **Pattern Discovery Part II - Exploratory and Descriptive Analysis**
 
 ## 1. Does Country has significal effect on Price? Use ANOVA test.
 ## 2. Is Higher Point(Rating) associated with Higher Price or vice versa? Use  Pearson correlation coefficient and Linear Regression analysis to measure the linear relationship.
