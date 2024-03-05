@@ -10,32 +10,32 @@ This project focuses on Exploratory Data Analysis (EDA), Descriptive analysis, a
 
 The primary objectives of this project:
 
-# <font color="#b33939" color face="Giorgia">**Data Inspection**</font>
+# **Data Inspection:**
 
-- Import the Datasets winemag-data_first150k.csv and Inspect! winemag-data_first150k.csv contains 10 columns and 150k rows of wine reviews.
+Import the Datasets winemag-data_first150k.csv and Inspect! winemag-data_first150k.csv contains 10 columns and 150k rows of wine reviews.
 
 One consideration is that this data is from one month in the summer (June 2017) and was collected from a website based in the United States. The demographics of those people making the Wine Reviews are undoubtedly American and might be prone to drink more American wines due to the domestic costs.
 
-# <font color="#b33939" color face="Giorgia">**Data Cleaning**</font>
+# **Data Cleaning:**
 
 ## 1. Rename all column names to title and set index  
 ## 2. Drop duplicated rows  
 ## 3. Handle missing values in the dataset 
-### 3.1 Fill in the missing values in the 'Country' column  
-### 3.2 Fill in the missing values in the 'Province' column  
-### 3.3 Handling Missing Values in Prices  
-#### 3.3.1 Analyze the distribution of 'Price'  
-#### 3.3.2 Can we simply drop rows with missing Price values?   
-#### 3.3.3 Remove Tunisia and Egypt countries because the number of reviews for them are too small and there are no available prices.    
-#### 3.3.4 Which Approach to take to fill out missing prices? Group Median Imputation approach vs KNN Imputation Approach  
-#### 3.3.5 **Hybrid Approach:** use the group median method for low variability groups and use KNN imputation methods for high variability groups. **Created reviews_hybrid dataset.**  
-##### 3.3.5.1 Option one - Spliting datasets into two. One dataset use for group media approach and another dataset use for KNN approach. Then merge two datasets.  
-##### 3.3.5.2 Option Two (Best) - performing inplace Imputation for both group median and KNN approaches.  
-#### 3.3.6 **Group Median Imputation Approach** to fill out missing prices. Replace the missing values by groups(Country and Province) specific values. Use `.transform()` method. **Created reviews_gm dataset.**    
-##### 3.3.6.1 Analysis if for missing price values by group specific we should use mean price of median price?  
-##### 3.3.6.2 After we choose to use median price value as group specific value for missing price. Lets fill out the missing price values in the dataset.  
-#### 3.3.7 **K-nearest neighbors(KNN) Imputation Approach** to fill out missing prices. **Created reviews_knn dataset.**    
-#### 3.3.8 Compare Hybrib Imputation vs K-nearest neighbors(KNN) Imputation Approach vs Group Median Approach to fill out missing prices.  
+    ### 3.1 Fill in the missing values in the 'Country' column  
+    ### 3.2 Fill in the missing values in the 'Province' column  
+    ### 3.3 Handling Missing Values in Prices  
+        #### 3.3.1 Analyze the distribution of 'Price'  
+        #### 3.3.2 Can we simply drop rows with missing Price values?   
+        #### 3.3.3 Remove Tunisia and Egypt countries because the number of reviews for them are too small and there are no available prices.    
+        #### 3.3.4 Which Approach to take to fill out missing prices? Group Median Imputation approach vs KNN Imputation Approach  
+        #### 3.3.5 **Hybrid Approach:** use the group median method for low variability groups and use KNN imputation methods for high variability groups. **Created reviews_hybrid dataset.**  
+            ##### 3.3.5.1 Option one - Spliting datasets into two. One dataset use for group media approach and another dataset use for KNN approach. Then merge two datasets.  
+            ##### 3.3.5.2 Option Two (Best) - performing inplace Imputation for both group median and KNN approaches.  
+        #### 3.3.6 **Group Median Imputation Approach** to fill out missing prices. Replace the missing values by groups(Country and Province) specific values. Use `.transform()` method. **Created reviews_gm dataset.**    
+            ##### 3.3.6.1 Analysis if for missing price values by group specific we should use mean price of median price?  
+            ##### 3.3.6.2 After we choose to use median price value as group specific value for missing price. Lets fill out the missing price values in the dataset.  
+        #### 3.3.7 **K-nearest neighbors(KNN) Imputation Approach** to fill out missing prices. **Created reviews_knn dataset.**    
+        #### 3.3.8 Compare Hybrib Imputation vs K-nearest neighbors(KNN) Imputation Approach vs Group Median Approach to fill out missing prices.  
 
 For our further analysis we choose to use Hybrid Approach (3.3.5) in our further analysis that is we will use `reviews_hybrid`.   
 
@@ -57,7 +57,7 @@ For our further analysis, we choose to use the Descritization and Binning approa
 
 ## 5. Convert Rating and Price_Category to categorical data and set the order in `reviews_hybrid` dataset.    
 
-# <font color="#b33939" color face="Giorgia">**Pattern Discovery Part I - Data Aggregation**</font>  
+# **Pattern Discovery Part I - Data Aggregation:**  
 
 ## 1. Which country is dominant in Wine industry production?  
 ## 2. What is the most common variety reviewed in each country?  
@@ -70,7 +70,7 @@ For our further analysis, we choose to use the Descritization and Binning approa
 ## 9. Heatmap of the top 20 wine-producing countries based on the frequency of wines falling into different Rating categories.
 ## 10. Heatmap of the top 20 wine-producing countries based on the frequency of wines falling into different Price categories.
 
-# <font color="#b33939" color face="Giorgia">**Pattern Discovery Part II - Exploratory and Descriptive Analysis**</font>
+# **Pattern Discovery Part II - Exploratory and Descriptive Analysis:**
 
 ## 1. Does Country has significal effect on Price? Use ANOVA test.
 ## 2. Is Higher Point(Rating) associated with Higher Price or vice versa? Use  Pearson correlation coefficient and Linear Regression analysis to measure the linear relationship.
