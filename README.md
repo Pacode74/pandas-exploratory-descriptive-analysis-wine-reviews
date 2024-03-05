@@ -45,12 +45,11 @@ For our further analysis we choose to use Hybrid Approach (3.3.5) in our further
 Given this information, we have several options for handling these outliers, depending on my specific analysis goals: 
     - 4.2.1 **Keep the outliers**: If the high-priced wines are of particular interest or if we're analyzing market segments that include premium wines, we might choose to retain these data points.  
     - 4.2.2 **Exclude the outliers**: For analyses where extreme values might skew the results, such as when calculating average prices, we might consider excluding these outliers.  
-
-#### 4.2.3 **Cap and Floor the values**: We can cap and floor prices at a certain thresholds to lessen the impact of extremely high/low prices. But the data will not be excluded only the price values will be overwritten.  
-#### 4.2.4 **Discretization and Binning of 'Points' into 'Rating'**: I will use this for my further analysis.  
-#### 4.2.5 **Discretization and Binning of 'Price' into 'Price_cat'**: I will use this for my further analysis.  
-##### 4.2.5.1 Approach Discretizing Price based on Equal width bins.  
-##### 4.2.5.2 Approach Discretizing Price based on putting the same number of reviews into different brackets.    
+    - 4.2.3 **Cap and Floor the values**: We can cap and floor prices at a certain thresholds to lessen the impact of extremely high/low prices. But the data will not be excluded only the price values will be overwritten.  
+    - 4.2.4 **Discretization and Binning of 'Points' into 'Rating'**: I will use this for my further analysis.  
+    - 4.2.5 **Discretization and Binning of 'Price' into 'Price_cat'**: I will use this for my further analysis.  
+       - 4.2.5.1 Approach Discretizing Price based on Equal width bins.  
+       - 4.2.5.2 Approach Discretizing Price based on putting the same number of reviews into different brackets.    
 ##### 4.2.5.3 Approach Discretizing Price based on defining customized quanlites.   
 ##### 4.2.5.4 Approach Discretizing Price based on defining customized quanlites and considering outliers.  
 ##### 4.2.5.5 Approach K-Means Clustering for Price Binning.  
