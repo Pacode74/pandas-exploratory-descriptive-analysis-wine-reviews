@@ -4,9 +4,9 @@ This project is based on "The Complete Pandas Bootcamp 2023 - Data Science with 
 and taught by Alexander Hagmann. 
 
 The dataset for this project comes from Kaggle - Wine Reviews https://www.kaggle.com/datasets/zynicide/wine-reviews.
-The dataset was scrapped from https://www.wineenthusiast.com/">Wineenthusiast.com.
+The dataset was scraped from https://www.wineenthusiast.com/">Wineenthusiast.com.
 
-This project focuses on Exploratory Data Analysis (EDA), Descriptive analysis, and basic Inferential analysis.  
+This project focuses on Exploratory Data Analysis (EDA), descriptive analysis, and basic inferential analysis.  
 
 # **The primary objectives of this project:**
 
@@ -18,17 +18,17 @@ One consideration is that this data is from one month in the summer (June 2017) 
 
 ## **Data Cleaning**
 
-### 1. Rename all column names to title and set index  
-### 2. Drop duplicated rows  
-### 3. Handle missing values in the dataset 
+### 1. Renaming all column names to title case and setting the index  
+### 2. Dropping duplicated rows  
+### 3. Handling missing values in the dataset 
 - 3.1 Fill in the missing values in the 'Country' column  
 - 3.2 Fill in the missing values in the 'Province' column  
 - 3.3 Handling Missing Values in Prices  
     - 3.3.1 Analyze the distribution of 'Price'  
     - 3.3.2 Can we simply drop rows with missing Price values?   
     - 3.3.3 Remove Tunisia and Egypt countries because the number of reviews for them are too small and there are no available prices.    
-    - 3.3.4 Which Approach to take to fill out missing prices? Group Median Imputation approach vs KNN Imputation Approach  
-    - 3.3.5 **Hybrid Approach** to fill out missing prices. Use the group median method for low variability groups and use KNN imputation methods for high variability groups. Created reviews_hybrid dataset.  
+    - 3.3.4 Deciding on the approach for filling missing prices: Group Median Imputation vs. KNN Imputation vs Hybrid approach.  
+    - 3.3.5 **Hybrid Approach** to fill out missing price values. Combines the Group Median Method for datasets with low variability and the KNN Imputation Method for those with high variability, resulting in the reviews_hybrid dataset.  
          - 3.3.5.1 Option One - Spliting datasets into two. One dataset use for group media approach and another dataset use for KNN approach. Then merge two datasets.  
          - 3.3.5.2 Option Two (Best) - performing inplace Imputation for both group median and KNN approaches.  
     - 3.3.6 **Group Median Imputation Approach** to fill out missing prices. Replace the missing values by groups(Country and Province) specific values. Use `.transform()` method. Created reviews_gm dataset.    
@@ -37,7 +37,7 @@ One consideration is that this data is from one month in the summer (June 2017) 
     - 3.3.7 **K-nearest neighbors(KNN) Imputation Approach** to fill out missing prices. Created reviews_knn dataset.    
     - 3.3.8 Compare Hybrib Imputation vs K-nearest neighbors(KNN) Imputation Approach vs Group Median Approach to fill out missing prices.  
 
-For our further analysis we choose to use Hybrid Approach (3.3.5) meaning we will use `reviews_hybrid` dataset.   
+For further analysis, we have chosen to use the Hybrid Approach (Section 3.3.5), and will therefore utilize the `reviews_hybrid` dataset.  
 
 ### 4. Handle outliers in the reviews_hybrid dataset.   
 - 4.1 Analyze the distribution of 'Price'  
@@ -53,7 +53,7 @@ We have several options for handling these outliers, depending on our specific a
          - 4.2.5.3 Approach Discretizing Price based on defining customized quanlites.   
          - 4.2.5.4 Approach Discretizing Price based on defining customized quanlites and considering outliers.  
          - 4.2.5.5 Approach K-Means Clustering for Price Binning.  
-For our further analysis, we choose to use the Descritization and Binning approach according to 4.2.4 and 4.2.5.5   
+For our further analysis, we choose to use the Discretization and Binning approach according to 4.2.4 and 4.2.5.5   
 
 ### 5. Convert Rating and Price_Category to categorical data and set the order in reviews_hybrid dataset.    
 
@@ -72,7 +72,7 @@ For our further analysis, we choose to use the Descritization and Binning approa
 
 ## **Pattern Discovery Part II - Exploratory and Descriptive Analysis**
 
-### 1. Does Country has significal effect on Price? Use ANOVA test.
+### 1. Does Country has significant effect on Price? Use ANOVA test.
 ### 2. Is higher Point(Rating) associated with higher Price or vice versa? Use  Pearson correlation coefficient and Linear Regression analysis to measure the linear relationship.
 ### 3. Descriptive Price Category analysis.
 ### 4. Does Price Categories have significant effect on Price? Use ANOVA test.
