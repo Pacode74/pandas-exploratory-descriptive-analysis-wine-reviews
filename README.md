@@ -72,14 +72,14 @@ For our further analysis, we choose to use the Descritization and Binning approa
 
 ## **Pattern Discovery Part II - Exploratory and Descriptive Analysis**
 
-## 1. Does Country has significal effect on Price? Use ANOVA test.
-## 2. Is higher Point(Rating) associated with higher Price or vice versa? Use  Pearson correlation coefficient and Linear Regression analysis to measure the linear relationship.
-## 3. Descriptive Price Category analysis.
-## 4. Does Price Categories have significant effect on Price? Use ANOVA test.
-## 5. Compare Price and Point Distributions. Transformed Price and Points columns to a standard normal distribution. Use Z-score analysis.
-## 6. How each wine's quality rating compares to the average rating of wines from the same country. Use Z-score analysis.
-## 7. How each wine's price compares to the average price of wines from the same country. Use Z-score analysis.
-## 8. Hypothesis: wines from France have higher average ratings than wines from Italy. Perform independent sample t-test.
+### 1. Does Country has significal effect on Price? Use ANOVA test.
+### 2. Is higher Point(Rating) associated with higher Price or vice versa? Use  Pearson correlation coefficient and Linear Regression analysis to measure the linear relationship.
+### 3. Descriptive Price Category analysis.
+### 4. Does Price Categories have significant effect on Price? Use ANOVA test.
+### 5. Compare Price and Point Distributions. Transformed Price and Points columns to a standard normal distribution. Use Z-score analysis.
+### 6. How each wine's quality rating compares to the average rating of wines from the same country. Use Z-score analysis.
+### 7. How each wine's price compares to the average price of wines from the same country. Use Z-score analysis.
+### 8. Hypothesis: wines from France have higher average ratings than wines from Italy. Perform independent sample t-test.
 
 During the data cleaning process, we developed several different methods for handling missing values and outliers. We 
 chose only one of these methods, but for future projects, it would be worthwhile to explore other approaches as well. 
